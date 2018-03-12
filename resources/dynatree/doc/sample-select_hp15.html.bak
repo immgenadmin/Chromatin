@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
+    <link rel="shortcut icon" href="../../../test/bootstrap/bootstrap-3.1.1/docs/assets/ico/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../../../test/bootstrap/bootstrap-3.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="./jquery.fancybox.js"></script>
+
+
+    <title>Wenxian Plot</title>
+
+    <script src="../jquery/jquery.js" type="text/javascript"></script>
+    <script src="../jquery/jquery-ui.custom.js" type="text/javascript"></script>
+    <script src="../jquery/jquery.cookie.js" type="text/javascript"></script>
+
+    <link href="../src/skin/ui.dynatree.css" rel="stylesheet" type="text/css" id="skinSheet"> 
+    <script src="../src/jquery.dynatree.js" type="text/javascript"></script>
+
+    <!-- Start_Exclude: This block is not part of the sample code -->
+    <link href="prettify.css" rel="stylesheet">
+    <script src="prettify.js" type="text/javascript"></script>
+    <link href="sample.css" rel="stylesheet" type="text/css">
+    <script src="sample.js" type="text/javascript"></script>
+    
+    <!-- Henry P -->
+    <script src="sample-select_hp15.js" type="text/javascript"></script>
+    <!-- End_Exclude -->
+
+  </head>
+
+  <body class="example">
+
+    <div class="container">
+
+      <div class="masterhead"> </div>
+      
+      <div class="row">
+
+	<div class="col-md-4">
+	  <font color="white"> 1. Select the populations of interest. </font>
+	  <div id="tree3"></div>
+	</div>
+      
+	<div class="col-md-4">
+	  <font color="white"> 2. Input the list of genes. <br>(Or drag and drop a plain text file of the gene list.)<br> </font>
+	  <textarea rows="10" cols="30" name="Genes" id="Genes" form="myform">
+Trpc6
+Csgalnact1
+Aldh1a1
+Gm4951
+Prkg1
+Ptplad2
+Rgs1
+Plxdc2
+Bgn
+Samd12
+Abcg3
+Arhgef12
+Iigp1
+Procr
+Klf12
+Esam
+Pdzk1ip1
+Dst
+Nckap1
+Ttc39b
+Nrxn1
+Tnip3
+4933409K07Rik
+Zbtb38
+F11r
+4933409K07Rik
+4933409K07Rik
+Gm3893
+Slc24a5
+Npr2
+Plscr4
+Crispld1
+Gucy1a3
+Lphn2
+Zfp532
+Gm3893
+Egr1
+Mecom
+Lonrf3
+Pkd2
+Ccdc112
+Lphn2
+Sult1a1
+Cdc42bpa
+Slc16a9
+Nfia
+Sema7a
+Art4
+A930039A15Rik
+Naip5
+Gata3
+Chrnb1
+Cish
+Mllt4
+Leprel2
+Rec8
+2310057J16Rik
+Cdk14
+Ptrf
+Trim47
+Fosb
+Rhof
+Gbp5
+Irf6
+Gatsl3
+Syde1
+C630004H02Rik
+Ndrg2
+Erc1
+Nlrc5
+Cttn
+Inadl
+Tead2
+Vsig2
+Ptpn21
+Ell2
+Tom1l1
+Cyp4v3
+Fry
+Snx33
+Tle6
+A630072M18Rik
+Tbc1d9
+Tle2
+Srgap3
+Vsig10
+Srgap3
+Hoxb4
+4933409K07Rik
+Tmem140
+Hoxa5
+Arhgap6
+Taf9b
+Ctsf
+Ccl19
+Vsig10
+Fam171a1
+C1rl
+1810062O18Rik
+Tinagl1
+Syde2
+Fgfr1
+Pde8a
+Ldhd
+Sfxn4
+Zfp111
+Ptpn14
+Hoxa6
+Mlph
+Col16a1
+Cdc42bpb
+Copz2
+Zfp870
+Mast4
+2310028H24Rik
+Gkap1
+St3gal1
+B230354K17Rik
+Vsig10
+Rab11fip5
+Kif1b
+Eps8l2
+Mir27a
+Dnaja4
+Obsl1
+Sorbs1
+Plekho2
+Tanc2
+Gpr31c
+Dock6
+Rundc3a
+4930402H24Rik
+Gm10866
+Dync2h1
+Nr4a1
+Fchsd1
+2410022M11Rik
+Ppp4r1l-ps
+Abhd1
+Prpf40b
+Ythdc2
+Carf
+Evi5l
+Fgfrl1
+Ttc36
+Hdhd2
+Krtcap3
+Lrrc29
+Gm10638
+Pqlc1
+	  </textarea>
+	  <form id="myform" action="" method="post">
+	    <input type="hidden" name="Grp1" id="Grp1"></input><br>
+	  </form>
+
+	</div>
+	
+	<div class="col-md-4">
+	  <input type="checkbox" id="groupingpop"> <font color="white">Group populations<br> </font>
+	  <font color="white"> 3. Let's see! <br> </font>
+	  <input id="btn" class="btn btn-primary" type="submit" value="Submit"/>
+	</br>
+	</br>
+	<font color="white"> 4. Download <br> </font>
+	<input id="btn2" class="btn btn-primary" type="submit" value="Download"/>
+
+	</div>
+
+      </div> <!-- end .row -->
+      
+      <div class="row">
+      </div>
+
+  </body>
+</html>

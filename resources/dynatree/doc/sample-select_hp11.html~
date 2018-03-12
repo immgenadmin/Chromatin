@@ -1,0 +1,756 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
+    <link rel="shortcut icon" href="../../../test/bootstrap/bootstrap-3.1.1/docs/assets/ico/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../../../test/bootstrap/bootstrap-3.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+<!-- fancyBox -->
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="./fancyBox/lib/jquery-1.10.2.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="./fancyBox/lib/jquery.mousewheel.pack.js?v=3.1.3"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="./fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="./fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="./fancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="./fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="./fancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="./fancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="./fancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
+	<title>Wenxian Plot</title>
+
+	<!-- <script src="../jquery/jquery.js" type="text/javascript"></script> -->
+	<script src="../jquery/jquery-ui.custom.js" type="text/javascript"></script>
+	<!-- <script src="../jquery/jquery.cookie.js" type="text/javascript"></script> -->
+
+	<link href="../src/skin/ui.dynatree.css" rel="stylesheet" type="text/css" id="skinSheet">
+	<script src="../src/jquery.dynatree.js" type="text/javascript"></script>
+
+	<!-- <\!-- Start_Exclude: This block is not part of the sample code -\-> -->
+	<!-- <link href="prettify.css" rel="stylesheet"> -->
+	<!-- <script src="prettify.js" type="text/javascript"></script> -->
+	<!-- <link href="sample.css" rel="stylesheet" type="text/css"> -->
+	<!-- <script src="sample.js" type="text/javascript"></script> -->
+	<!-- <\!-- End_Exclude -\-> -->
+
+
+<script type="text/javascript">
+	var treeData = [
+
+		{title: "Stem Cells", isFolder: true, key: "Stem Cells", icon: false,
+			children: [
+
+{title:"SC_LT34F_BM",key: "SC_LT34F_BM", icon: false },
+{title:"SC_LTSL_BM",key: "SC_LTSL_BM", icon: false },
+{title:"SC_STSL_BM",key: "SC_STSL_BM", icon: false },
+{title:"SC_LTSL_FL",key: "SC_LTSL_FL", icon: false },
+{title:"SC_STSL_FL",key: "SC_STSL_FL", icon: false },
+{title:"SC_MPP34F_BM",key: "SC_MPP34F_BM", icon: false },
+{title:"SC_ST34F_BM",key: "SC_ST34F_BM", icon: false },
+{title:"SC_CMP_BM_MM",key: "SC_CMP_BM_MM", icon: false },
+{title:"SC_CMP_BM_DR",key: "SC_CMP_BM_DR", icon: false },
+{title:"SC_MEP_BM",key: "SC_MEP_BM", icon: false },
+{title:"SC_GMP_BM",key: "SC_GMP_BM", icon: false },
+{title:"SC_CDP_BM",key: "SC_CDP_BM", icon: false },
+{title:"SC_MDP_BM",key: "SC_MDP_BM", icon: false },
+{title:"MLP_BM",key: "MLP_BM", icon: false },
+{title:"MLP_FL",key: "MLP_FL", icon: false },
+
+
+			]
+		},
+		{title: "B cells", isFolder: true, key: "B cells", icon: false,
+			children: [
+
+{title:"proB_CLP_BM",key: "proB_CLP_BM", icon: false },
+{title:"proB_FrA_BM",key: "proB_FrA_BM", icon: false },
+{title:"proB_FrBC_BM",key: "proB_FrBC_BM", icon: false },
+{title:"preB_FrC_BM",key: "preB_FrC_BM", icon: false },
+{title:"preB_FrD_BM",key: "preB_FrD_BM", icon: false },
+{title:"B_FrE_BM",key: "B_FrE_BM", icon: false },
+{title:"proB_CLP_FL",key: "proB_CLP_FL", icon: false },
+{title:"proB_FrA_FL",key: "proB_FrA_FL", icon: false },
+{title:"proB_FrBC_FL",key: "proB_FrBC_FL", icon: false },
+{title:"preB_FrD_FL",key: "preB_FrD_FL", icon: false },
+{title:"B_FrE_FL",key: "B_FrE_FL", icon: false },
+{title:"B_T1_Sp",key: "B_T1_Sp", icon: false },
+{title:"B_T2_Sp",key: "B_T2_Sp", icon: false },
+{title:"B_T3_Sp",key: "B_T3_Sp", icon: false },
+{title:"B_Fo_Sp",key: "B_Fo_Sp", icon: false },
+{title:"B_GC_Sp",key: "B_GC_Sp", icon: false },
+{title:"B_MZ_Sp",key: "B_MZ_Sp", icon: false },
+{title:"B1a_Sp",key: "B1a_Sp", icon: false },
+{title:"B_FrF_BM",key: "B_FrF_BM", icon: false },
+{title:"B_Fo_MLN",key: "B_Fo_MLN", icon: false },
+{title:"B_Fo_LN",key: "B_Fo_LN", icon: false },
+{title:"B_Fo_PC",key: "B_Fo_PC", icon: false },
+{title:"B1b_PC",key: "B1b_PC", icon: false },
+{title:"B1a_PC",key: "B1a_PC", icon: false },
+			]
+		},
+
+                {title: "Dendritic cells", isFolder: true, key: "Dendritic cells", icon: false,
+                        children: [
+
+{title:"DC_8-_Th",key: "DC_8-_Th", icon: false },
+{title:"DC_8+_Th",key: "DC_8%2B_Th", icon: false },
+{title:"DC_4+_Sp_GR",key: "DC_4%2B_Sp_GR", icon: false },
+{title:"DC_4+_Sp_ST",key: "DC_4%2B_Sp_ST", icon: false },
+{title:"DC_8+_Sp_GR",key: "DC_8%2B_Sp_GR", icon: false },
+{title:"DC_8+_Sp_ST",key: "DC_8%2B_Sp_ST", icon: false },
+{title:"DC_8-4-11b-_Sp",key: "DC_8-4-11b-_Sp", icon: false },
+{title:"DC_8-4-11b+_Sp",key: "DC_8-4-11b%2B_Sp", icon: false },
+{title:"DC_pDC_8-_Sp",key: "DC_pDC_8-_Sp", icon: false },
+{title:"DC_pDC_8+_Sp",key: "DC_pDC_8%2B_Sp", icon: false },
+{title:"DC_4+_SLN",key: "DC_4%2B_SLN", icon: false },
+{title:"DC_8+_SLN",key: "DC_8%2B_SLN", icon: false },
+{title:"DC_8-4-11b-_SLN",key: "DC_8-4-11b-_SLN", icon: false },
+{title:"DC_8-4-11b+_SLN",key: "DC_8-4-11b%2B_SLN", icon: false },
+{title:"DC_pDC_8+_SLN",key: "DC_pDC_8%2B_SLN", icon: false },
+{title:"DC_IIhilang-103-11blo_SLN",key: "DC_IIhilang-103-11blo_SLN", icon: false },
+{title:"DC_IIhilang-103-11b+_SLN",key: "DC_IIhilang-103-11b%2B_SLN", icon: false },
+{title:"DC_IIhilang+103+11blo_SLN",key: "DC_IIhilang%2B103%2B11blo_SLN", icon: false },
+{title:"DC_IIhilang+103-11b+_SLN",key: "DC_IIhilang%2B103-11b%2B_SLN", icon: false },
+{title:"DC_4+_MLN",key: "DC_4%2B_MLN", icon: false },
+{title:"DC_8+_MLN",key: "DC_8%2B_MLN", icon: false },
+{title:"DC_8-4-11b-_MLN",key: "DC_8-4-11b-_MLN", icon: false },
+{title:"DC_8-4-11b+_MLN",key: "DC_8-4-11b%2B_MLN", icon: false },
+{title:"DC_pDC_8+_MLN",key: "DC_pDC_8%2B_MLN", icon: false },
+{title:"DC_LC_Sk",key: "DC_LC_Sk", icon: false },
+{title:"DC_103-11b+_Lv",key: "DC_103-11b%2B_Lv", icon: false },
+{title:"DC_103+11b-_Lv",key: "DC_103%2B11b-_Lv", icon: false },
+{title:"DC_103+11b-_LuLN",key: "DC_103%2B11b-_LuLN", icon: false },
+{title:"DC_103-11b+_LuLN",key: "DC_103-11b%2B_LuLN", icon: false },
+{title:"MF_103-11b+_Lu",key: "MF_103-11b%2B_Lu", icon: false },
+{title:"DC_103-11b+24+_Lu",key: "DC_103-11b%2B24%2B_Lu", icon: false },
+{title:"DC_103+11b-_Lu",key: "DC_103%2B11b-_Lu", icon: false },
+{title:"DC_103-11b+_PolyIC_Lu",key: "DC_103-11b%2B_PolyIC_Lu", icon: false },
+{title:"DC_103+11b-_PolyIC_Lu",key: "DC_103%2B11b-_PolyIC_Lu", icon: false },
+{title:"MF_II+480lo_PC",key: "MF_II%2B480lo_PC", icon: false },
+{title:"DC_103-11b+F4/80lo_Kd",key: "DC_103-11b%2BF4/80lo_Kd", icon: false },
+{title:"MF_103-11b+_SI",key: "MF_103-11b%2B_SI", icon: false },
+{title:"DC_103+11b-_SI",key: "DC_103%2B11b-_SI", icon: false },
+{title:"DC_103+11b+_SI",key: "DC_103%2B11b%2B_SI", icon: false },
+{title:"MF_11cloSer_SI",key: "MF_11cloSer_SI", icon: false },
+{title:"MF_103-11b+_Salm3_SI",key: "MF_103-11b%2B_Salm3_SI", icon: false },
+{title:"DC_103+11b-_Salm3_SI",key: "DC_103%2B11b-_Salm3_SI", icon: false },
+{title:"DC_103+11b+_Salm3_SI",key: "DC_103%2B11b%2B_Salm3_SI", icon: false },
+{title:"MF_11cloSer_Salm3_SI",key: "MF_11cloSer_Salm3_SI", icon: false },
+{title:"DC_11b+_PPAR-_Lu",key: "DC_11b%2B_PPAR-_Lu", icon: false },
+{title:"DC_103+_PPAR-_Lu",key: "DC_103%2B_PPAR-_Lu", icon: false },
+{title:"DC_RTag_TI",key: "DC_RTag_TI", icon: false },
+{title:"MDS_Gr1lo_Sp",key: "MDS_Gr1lo_Sp", icon: false },
+{title:"MDS_Gr1lo_B16_Sp",key: "MDS_Gr1lo_B16_Sp", icon: false },
+{title:"MDS_Gr1lo_11c-_B16_TI",key: "MDS_Gr1lo_11c-_B16_TI", icon: false },
+{title:"MDS_Gr1lo_11c+_B16_TI",key: "MDS_Gr1lo_11c%2B_B16_TI", icon: false },
+{title:"MDS_Gr1hi_Sp",key: "MDS_Gr1hi_Sp", icon: false },
+{title:"MDS_Gr1hi_B16_Sp",key: "MDS_Gr1hi_B16_Sp", icon: false },
+
+
+
+]},
+                {title: "Macrophages", isFolder: true, key: "Macrophages", icon: false,
+                        children: [
+
+
+
+
+{title:"MF_BM",key: "MF_BM", icon: false },
+{title:"MF_RP_Sp",key: "MF_RP_Sp", icon: false },
+{title:"MF_169+11chi_SLN",key: "MF_169%2B11chi_SLN", icon: false },
+{title:"MF_Medl_SLN",key: "MF_Medl_SLN", icon: false },
+{title:"MF_Sbcaps_SLN",key: "MF_Sbcaps_SLN", icon: false },
+{title:"MF_Lu",key: "MF_Lu", icon: false },
+{title:"MF_II-480hi_PC",key: "MF_II-480hi_PC", icon: false },
+{title:"MF_Microglia_CNS",key: "MF_Microglia_CNS", icon: false },
+{title:"MF_Thio5_II+480int_PC",key: "MF_Thio5_II%2B480int_PC", icon: false },
+{title:"MF_Thio5_II-480int_PC",key: "MF_Thio5_II-480int_PC", icon: false },
+{title:"MF_Thio5_II-480hi_PC",key: "MF_Thio5_II-480hi_PC", icon: false },
+{title:"MF_Thio5_II+480lo_PC",key: "MF_Thio5_II%2B480lo_PC", icon: false },
+{title:"MF_Microglia_DAP12-_CNS",key: "MF_Microglia_DAP12-_CNS", icon: false },
+{title:"MF_II-480hi_DAP12-_PC",key: "MF_II-480hi_DAP12-_PC", icon: false },
+{title:"MF_PPAR-_Lu",key: "MF_PPAR-_Lu", icon: false },
+{title:"MF_RTag_TI",key: "MF_RTag_TI", icon: false },
+]},
+
+
+                {title: "Monocytes", isFolder: true, key: "Monocytes", icon: false,
+                        children: [
+
+{title:"Mo_6C+II-_BM",key: "Mo_6C%2BII-_BM", icon: false },
+{title:"Mo_6C-II-_BM",key: "Mo_6C-II-_BM", icon: false },
+{title:"Mo_6C+II-_Bl",key: "Mo_6C%2BII-_Bl", icon: false },
+{title:"Mo_6C+II+_Bl",key: "Mo_6C%2BII%2B_Bl", icon: false },
+{title:"Mo_6C-II-_Bl",key: "Mo_6C-II-_Bl", icon: false },
+{title:"Mo_6C-II+_Bl",key: "Mo_6C-II%2B_Bl", icon: false },
+{title:"Mo_6C-IIint_Bl",key: "Mo_6C-IIint_Bl", icon: false },
+{title:"Mo_6C+II-_LN",key: "Mo_6C%2BII-_LN", icon: false },
+
+]},
+
+                {title: "Neutrophils", isFolder: true, key: "Neutrophils", icon: false,
+                        children: [
+
+{title:"GN_BM",key: "GN_BM", icon: false },
+{title:"GN_Bl",key: "GN_Bl", icon: false },
+{title:"GN_Arth_BM",key: "GN_Arth_BM", icon: false },
+{title:"GN_Arth_SynF",key: "GN_Arth_SynF", icon: false },
+{title:"GN_UrAc_PC",key: "GN_UrAc_PC", icon: false },
+{title:"GN_Thio_PC",key: "GN_Thio_PC", icon: false },
+
+]},
+
+                {title: "NK cells", isFolder: true, key: "NK cells", icon: false,
+                        children: [
+
+{title:"NK_Sp",key: "NK_Sp", icon: false },
+{title:"NK_Lv",key: "NK_Lv", icon: false },
+{title:"NK_49CI-_Sp",key: "NK_49CI-_Sp", icon: false },
+{title:"NK_49CI+_Sp",key: "NK_49CI%2B_Sp", icon: false },
+{title:"NK_49H-_Sp",key: "NK_49H-_Sp", icon: false },
+{title:"NK_49H+_Sp",key: "NK_49H%2B_Sp", icon: false },
+{title:"NK_MCMV1_Sp",key: "NK_MCMV1_Sp", icon: false },
+{title:"NK_MCMV7_Sp",key: "NK_MCMV7_Sp", icon: false },
+{title:"NK_H-_MCMV1_Sp",key: "NK_H-_MCMV1_Sp", icon: false },
+{title:"NK_H-_MCMV7_Sp",key: "NK_H-_MCMV7_Sp", icon: false },
+{title:"NK_H+_MCMV1_Sp",key: "NK_H%2B_MCMV1_Sp", icon: false },
+{title:"NK_H+_MCMV7_Sp",key: "NK_H%2B_MCMV7_Sp", icon: false },
+{title:"NK_b2m-_Sp",key: "NK_b2m-_Sp", icon: false },
+{title:"NK_DAP10-_Sp",key: "NK_DAP10-_Sp", icon: false },
+{title:"NK_DAP12-_Sp",key: "NK_DAP12-_Sp", icon: false },
+{title:"NK_DAP10-12-_Sp",key: "NK_DAP10-12-_Sp", icon: false },
+{title:"NK_Tbet-_Sp",key: "NK_Tbet-_Sp", icon: false },
+{title:"NK_Tbet+_Sp",key: "NK_Tbet%2B_Sp", icon: false },
+{title:"NK_Mem_CMV_Bim-_d27_Sp",key: "NK_Mem_CMV_Bim-_d27_Sp", icon: false },
+{title:"NK_Mem_CMV_d27_Sp",key: "NK_Mem_CMV_d27_Sp", icon: false },
+
+
+]},
+
+                {title: "ab T cells", isFolder: true, key: "ab T cells", icon: false,
+                        children: [
+
+				{title:"preT_ETP_Th",key: "preT_ETP_Th", icon: false },
+{title:"preT_ETP-2A_Th",key: "preT_ETP-2A_Th", icon: false },
+{title:"preT_DN2_Th",key: "preT_DN2_Th", icon: false },
+{title:"preT_DN2A_Th",key: "preT_DN2A_Th", icon: false },
+{title:"preT_DN2B_Th",key: "preT_DN2B_Th", icon: false },
+{title:"preT_DN2-3_Th",key: "preT_DN2-3_Th", icon: false },
+{title:"preT_DN3A_Th",key: "preT_DN3A_Th", icon: false },
+{title:"preT_DN3B_Th",key: "preT_DN3B_Th", icon: false },
+{title:"preT_DN3-4_Th",key: "preT_DN3-4_Th", icon: false },
+{title:"T_DN4_Th",key: "T_DN4_Th", icon: false },
+{title:"T_ISP_Th",key: "T_ISP_Th", icon: false },
+{title:"T_DP_Th",key: "T_DP_Th", icon: false },
+{title:"T_DPbl_Th",key: "T_DPbl_Th", icon: false },
+{title:"T_DPbl_MHC-_Th",key: "T_DPbl_MHC-_Th", icon: false },
+{title:"T_DPsm_Th",key: "T_DPsm_Th", icon: false },
+{title:"T_DPsm_MHC-_Th",key: "T_DPsm_MHC-_Th", icon: false },
+{title:"T_DP69+_Th",key: "T_DP69%2B_Th", icon: false },
+{title:"T_4+8int_Th",key: "T_4%2B8int_Th", icon: false },
+{title:"T_4SP69+_Th",key: "T_4SP69%2B_Th", icon: false },
+{title:"T_4SP24int_Th",key: "T_4SP24int_Th", icon: false },
+{title:"T_4SP24-_Th",key: "T_4SP24-_Th", icon: false },
+{title:"T_4int8+_Th",key: "T_4int8%2B_Th", icon: false },
+{title:"T_8SP69+_Th",key: "T_8SP69%2B_Th", icon: false },
+{title:"T_8SP24int_Th",key: "T_8SP24int_Th", icon: false },
+{title:"T_8SP24-_Th",key: "T_8SP24-_Th", icon: false },
+{title:"T_4Nve_Sp",key: "T_4Nve_Sp", icon: false },
+{title:"T_4Mem_Sp",key: "T_4Mem_Sp", icon: false },
+{title:"T_4Mem44h62l_Sp",key: "T_4Mem44h62l_Sp", icon: false },
+{title:"T_4Mem_Tbet-_Sp",key: "T_4Mem_Tbet-_Sp", icon: false },
+{title:"T_4Mem_Tbet+_Sp",key: "T_4Mem_Tbet%2B_Sp", icon: false },
+{title:"T_4Nve_LN",key: "T_4Nve_LN", icon: false },
+{title:"T_4Mem_LN",key: "T_4Mem_LN", icon: false },
+{title:"T_4Mem44h62l_LN",key: "T_4Mem44h62l_LN", icon: false },
+{title:"T_4Nve_PP",key: "T_4Nve_PP", icon: false },
+{title:"T_4Nve_MLN",key: "T_4Nve_MLN", icon: false },
+{title:"T_4_LN_BDC",key: "T_4_LN_BDC", icon: false },
+{title:"T_4_PLN_BDC",key: "T_4_PLN_BDC", icon: false },
+{title:"T_4_Pa_BDC",key: "T_4_Pa_BDC", icon: false },
+{title:"T_4FP3-_Sp",key: "T_4FP3-_Sp", icon: false },
+{title:"T_4FP3+25+_Sp",key: "T_4FP3%2B25%2B_Sp", icon: false },
+{title:"T_4FP3+25+_AA",key: "T_4FP3%2B25%2B_AA", icon: false },
+{title:"T_4FP3+25+_LN",key: "T_4FP3%2B25%2B_LN", icon: false },
+{title:"T_8Nve_Sp",key: "T_8Nve_Sp", icon: false },
+{title:"T_8Mem_Sp",key: "T_8Mem_Sp", icon: false },
+{title:"T_8Mem_Tbet-_Sp",key: "T_8Mem_Tbet-_Sp", icon: false },
+{title:"T_8Mem_Tbet+_Sp",key: "T_8Mem_Tbet%2B_Sp", icon: false },
+{title:"T_8Nve_LN",key: "T_8Nve_LN", icon: false },
+{title:"T_8Mem_LN",key: "T_8Mem_LN", icon: false },
+{title:"T_8Nve_PP",key: "T_8Nve_PP", icon: false },
+{title:"T_8Nve_MLN",key: "T_8Nve_MLN", icon: false },
+{title:"T_8Nve_Sp_OT1",key: "T_8Nve_Sp_OT1", icon: false },
+{title:"T_8Eff_Sp_OT1_d5_VSVOva",key: "T_8Eff_Sp_OT1_d5_VSVOva", icon: false },
+{title:"T_8Eff_Sp_OT1_d6_VSVOva",key: "T_8Eff_Sp_OT1_d6_VSVOva", icon: false },
+{title:"T_8Eff_Sp_OT1_d8_VSVOva",key: "T_8Eff_Sp_OT1_d8_VSVOva", icon: false },
+{title:"T_8Eff_Sp_OT1_d15_VSVOva",key: "T_8Eff_Sp_OT1_d15_VSVOva", icon: false },
+{title:"T_8Mem_Sp_OT1_d45_VSVOva",key: "T_8Mem_Sp_OT1_d45_VSVOva", icon: false },
+{title:"T_8Mem_Sp_OT1_d106_VSVOva",key: "T_8Mem_Sp_OT1_d106_VSVOva", icon: false },
+{title:"T_8Eff_Sp_OT1_12hr_LisOva",key: "T_8Eff_Sp_OT1_12hr_LisOva", icon: false },
+{title:"T_8Eff_Sp_OT1_24hr_LisOva",key: "T_8Eff_Sp_OT1_24hr_LisOva", icon: false },
+{title:"T_8Eff_Sp_OT1_48hr_LisOva",key: "T_8Eff_Sp_OT1_48hr_LisOva", icon: false },
+{title:"T_8Eff_Sp_OT1_d6_LisOva",key: "T_8Eff_Sp_OT1_d6_LisOva", icon: false },
+{title:"T_8Eff_Sp_OT1_d8_LisOva",key: "T_8Eff_Sp_OT1_d8_LisOva", icon: false },
+{title:"T_8Eff_Sp_OT1_d10_LisOva",key: "T_8Eff_Sp_OT1_d10_LisOva", icon: false },
+{title:"T_8Eff_Sp_OT1_d15_LisOva",key: "T_8Eff_Sp_OT1_d15_LisOva", icon: false },
+{title:"T_8Mem_Sp_OT1_d45_LisOva",key: "T_8Mem_Sp_OT1_d45_LisOva", icon: false },
+{title:"T_8Mem_Sp_OT1_d100_LisOva",key: "T_8Mem_Sp_OT1_d100_LisOva", icon: false },
+{title:"T_8Mem103-_Sp_OT1_d20_VSVOva",key: "T_8Mem103-_Sp_OT1_d20_VSVOva", icon: false },
+{title:"T_8Mem103-_Br_OT1_d20_VSVOva",key: "T_8Mem103-_Br_OT1_d20_VSVOva", icon: false },
+{title:"T_8Mem103+_Br_OT1_d20_VSVOva",key: "T_8Mem103%2B_Br_OT1_d20_VSVOva", icon: false },
+{title:"T_8Eff_Sp_tet_d8_LisOva",key: "T_8Eff_Sp_tet_d8_LisOva", icon: false },
+{title:"T_8Eff_Sp_tet_d45_LisOva",key: "T_8Eff_Sp_tet_d45_LisOva", icon: false },
+{title:"T_4_Sp_B16",key: "T_4_Sp_B16", icon: false },
+{title:"T_4_TI_B16",key: "T_4_TI_B16", icon: false },
+{title:"T_8_Sp_B16",key: "T_8_Sp_B16", icon: false },
+{title:"T_8_TI_B16",key: "T_8_TI_B16", icon: false },
+{title:"T_8Py44+_Sp",key: "T_8Py44%2B_Sp", icon: false },
+{title:"T_8Py44+_TI",key: "T_8Py44%2B_TI", icon: false },
+{title:"NKT_44-NK1_1-_Th",key: "NKT_44-NK1_1-_Th", icon: false },
+{title:"NKT_44+NK1_1-_Th",key: "NKT_44%2BNK1_1-_Th", icon: false },
+{title:"NKT_44+NK1_1+_Th",key: "NKT_44%2BNK1_1%2B_Th", icon: false },
+{title:"NKT_4+_Sp",key: "NKT_4%2B_Sp", icon: false },
+{title:"NKT_4-_Sp",key: "NKT_4-_Sp", icon: false },
+{title:"NKT_4+_Lv",key: "NKT_4%2B_Lv", icon: false },
+{title:"NKT_4-_Lv",key: "NKT_4-_Lv", icon: false },
+{title:"NKT_4+_Lu",key: "NKT_4%2B_Lu", icon: false },
+{title:"NKT_4-_Lu",key: "NKT_4-_Lu", icon: false },
+
+]},
+
+                {title: "gd T cells", isFolder: true, key: "gd T cells", icon: false,
+                        children: [
+
+{title:"Tgd_Th",key: "Tgd_Th", icon: false },
+{title:"Tgd_vg1+vd6-24ahi_Th",key: "Tgd_vg1%2Bvd6-24ahi_Th", icon: false },
+{title:"Tgd_vg1+vd6+24ahi_Th",key: "Tgd_vg1%2Bvd6%2B24ahi_Th", icon: false },
+{title:"Tgd_vg2-24ahi_Th",key: "Tgd_vg2-24ahi_Th", icon: false },
+{title:"Tgd_vg2+24ahi_Th",key: "Tgd_vg2%2B24ahi_Th", icon: false },
+{title:"Tgd_vg2+24ahi_e17_Th",key: "Tgd_vg2%2B24ahi_e17_Th", icon: false },
+{title:"Tgd_vg3+24ahi_e17_Th",key: "Tgd_vg3%2B24ahi_e17_Th", icon: false },
+{title:"Tgd_vd1+24ahi_Th",key: "Tgd_vd1%2B24ahi_Th", icon: false },
+{title:"Tgd_vg5+24ahi_Th",key: "Tgd_vg5%2B24ahi_Th", icon: false },
+{title:"Tgd_vg1+vd6-24ahi_Th_TCRbko",key: "Tgd_vg1%2Bvd6-24ahi_Th_TCRbko", icon: false },
+{title:"Tgd_vg1+vd6+24ahi_Th_TCRbko",key: "Tgd_vg1%2Bvd6%2B24ahi_Th_TCRbko", icon: false },
+{title:"Tgd_vg1+vd6-24ahi_Th_ITKko",key: "Tgd_vg1%2Bvd6-24ahi_Th_ITKko", icon: false },
+{title:"Tgd_vg2-24ahi_Th_TCRbko",key: "Tgd_vg2-24ahi_Th_TCRbko", icon: false },
+{title:"Tgd_vg2+24ahi_Th_TCRbko",key: "Tgd_vg2%2B24ahi_Th_TCRbko", icon: false },
+{title:"Tgd_vg2+24ahi_Th_ITKko",key: "Tgd_vg2%2B24ahi_Th_ITKko", icon: false },
+{title:"Tgd_vg1+vd6-24alo_Th",key: "Tgd_vg1%2Bvd6-24alo_Th", icon: false },
+{title:"Tgd_vg1+vd6+24alo_Th",key: "Tgd_vg1%2Bvd6%2B24alo_Th", icon: false },
+{title:"Tgd_vg2+24alo_Th",key: "Tgd_vg2%2B24alo_Th", icon: false },
+{title:"Tgd_vg3+24alo_e17_Th",key: "Tgd_vg3%2B24alo_e17_Th", icon: false },
+{title:"Tgd_vg1+vd6-24alo_Th_TCRbko",key: "Tgd_vg1%2Bvd6-24alo_Th_TCRbko", icon: false },
+{title:"Tgd_vg1+vd6+24alo_Th_TCRbko",key: "Tgd_vg1%2Bvd6%2B24alo_Th_TCRbko", icon: false },
+{title:"Tgd_vg1+vd6-24alo_Th_ITKko",key: "Tgd_vg1%2Bvd6-24alo_Th_ITKko", icon: false },
+{title:"Tgd_vg2-24alo_Th_TCRbko",key: "Tgd_vg2-24alo_Th_TCRbko", icon: false },
+{title:"Tgd_vg2+24alo_Th_TCRbko",key: "Tgd_vg2%2B24alo_Th_TCRbko", icon: false },
+{title:"Tgd_Sp",key: "Tgd_Sp", icon: false },
+{title:"Tgd_vg2-_Sp",key: "Tgd_vg2-_Sp", icon: false },
+{title:"Tgd_vg2-_act_Sp",key: "Tgd_vg2-_act_Sp", icon: false },
+{title:"Tgd_vg2+_Sp",key: "Tgd_vg2%2B_Sp", icon: false },
+{title:"Tgd_vg2+_act_Sp",key: "Tgd_vg2%2B_act_Sp", icon: false },
+{title:"Tgd_vg2-_Sp_TCRbko",key: "Tgd_vg2-_Sp_TCRbko", icon: false },
+{title:"Tgd_vg2-_act_Sp_TCRbko",key: "Tgd_vg2-_act_Sp_TCRbko", icon: false },
+{title:"Tgd_vg2+_Sp_TCRbko",key: "Tgd_vg2%2B_Sp_TCRbko", icon: false },
+{title:"Tgd_vg1+vd6+_Th",key: "Tgd_vg1%2Bvd6%2B_Th", icon: false },
+{title:"Tgd_vg1+vd6-_Th",key: "Tgd_vg1%2Bvd6-_Th", icon: false },
+{title:"Tgd_vg1+vd6-_Th_TCRbko",key: "Tgd_vg1%2Bvd6-_Th_TCRbko", icon: false },
+{title:"Tgd_vg1+vd6+_Th_TCRbko",key: "Tgd_vg1%2Bvd6%2B_Th_TCRbko", icon: false },
+{title:"Tgd_vg1+vd6-_Th_ITKko",key: "Tgd_vg1%2Bvd6-_Th_ITKko", icon: false },
+{title:"Tgd_vg1+vd6+_Th_ITKko",key: "Tgd_vg1%2Bvd6%2B_Th_ITKko", icon: false },
+{title:"Tgd_vg5-_IEL",key: "Tgd_vg5-_IEL", icon: false },
+{title:"Tgd_vg5+_IEL",key: "Tgd_vg5%2B_IEL", icon: false },
+{title:"Tgd_vg5-_act_IEL",key: "Tgd_vg5-_act_IEL", icon: false },
+{title:"Tgd_vg5+_act_IEL",key: "Tgd_vg5%2B_act_IEL", icon: false },
+
+]},
+
+
+                {title: "Stromal cells", isFolder: true, key: "Stromal cells", icon: false,
+                        children: [
+				
+{title:"Ep_MEChi_Th",key: "Ep_MEChi_Th", icon: false },
+{title:"Ep_MEClo_Th",key: "Ep_MEClo_Th", icon: false },
+{title:"Fi_MTS15+_Th",key: "Fi_MTS15%2B_Th", icon: false },
+{title:"Fi_Sk",key: "Fi_Sk", icon: false },
+{title:"FRC_MLN",key: "FRC_MLN", icon: false },
+{title:"FRC_SLN",key: "FRC_SLN", icon: false },
+{title:"LEC_MLN",key: "LEC_MLN", icon: false },
+{title:"LEC_SLN",key: "LEC_SLN", icon: false },
+{title:"BEC_MLN",key: "BEC_MLN", icon: false },
+{title:"BEC_SLN",key: "BEC_SLN", icon: false },
+{title:"St_31-38-44-_SLN",key: "St_31-38-44-_SLN", icon: false },
+{title:"St_31-38-44+_SLN",key: "St_31-38-44%2B_SLN", icon: false },
+
+]}
+
+
+
+	]; // end treeData
+
+
+	$(function(){
+
+		// --- Initialize sample trees
+
+		$("#tree3").dynatree({
+			checkbox: true,
+			selectMode: 3,
+			children: treeData,
+			onSelect: function(select, node) {
+				// Get a list of all selected nodes, and convert to a key array:
+				var selKeys = $.map(node.tree.getSelectedNodes(), function(node){
+<!--					return node.data.key; -->
+					if (node.hasChildren() == false) { return node.data.key; }
+				});
+				$("#echoSelection3").text(selKeys.join(", "));
+				$("#Grp1").text(selKeys.join(","));
+
+
+		// Get a list of all selected TOP nodes
+				var selRootNodes = node.tree.getSelectedNodes(true);
+				// ... and convert to a key array:
+				var selRootKeys = $.map(selRootNodes, function(node){
+					return node.data.key;
+				});
+				$("#echoSelectionRootKeys3").text(selRootKeys.join(", "));
+				$("#echoSelectionRoots3").text(selRootNodes.join(", "));
+			},
+			onDblClick: function(node, event) {
+				node.toggleSelect();
+			},
+
+			// The following options are only required, if we have more than one tree on one page:
+//				initId: "treeData",
+			cookieId: "dynatree-Cb3",
+			idPrefix: "dynatree-Cb3-"
+		});
+
+
+		$("#skinCombo")
+		.val(0) // set state to prevent caching
+		.change(function(){
+			var href = "../src/"
+				+ $(this).val()
+				+ "/ui.dynatree.css"
+				+ "?reload=" + new Date().getTime();
+			$("#skinSheet").attr("href", href);
+		});
+		<!-- End_Exclude -->
+
+
+	});
+
+
+          $(document).ready(function(){
+
+	  $('.fancybox').fancybox();
+
+
+	  $("#fancybox-manual-a").click(function() {
+	  $.fancybox.open('fancyBox/demo/1_b.jpg');
+	  });
+
+		$("#fancybox-manual-b").click(function() {
+		$.fancybox.open({
+		href : 'fancyBox/demo/iframe.html',
+		type : 'iframe',
+		padding : 5
+		});
+		});
+
+	  $("#btn").click(function(){
+	  var myGenesTMP = $( "#Genes" ).val();
+	  var myGrp1 = $( "#Grp1" ).text();
+	  <!-- myGenes = myGenesTMP.replace("\n", ","); -->
+	  var myGenes = myGenesTMP.split("\n").join(",");
+	  var n = myGenes.length;
+	  myGenes = myGenes.substring(0, n-1);
+	  <!-- alert( myGenes ); -->
+	  <!-- alert( myGrp1 ); -->
+	  <!-- $("#results").attr('src', 'http://itlvmbibp01.med.harvard.edu/test/cgi-bin/submit6.cgi?Grp1=' + myGrp1 + '&Genes=' + myGenes); -->
+	  <!-- $("#single").attr('href', 'http://itlvmbibp01.med.harvard.edu/test/cgi-bin/submit6.cgi?Grp1=' + myGrp1 + '&Genes=' + myGenes); -->
+
+	  $("#hp2").attr('src', 'http://itlvmbibp01.med.harvard.edu/test/cgi-bin/submit6.cgi?Grp1=' + myGrp1 + '&Genes=' + myGenes);
+	  $("#hp1").attr('href', 'http://itlvmbibp01.med.harvard.edu/test/cgi-bin/submit6.cgi?Grp1=' + myGrp1 + '&Genes=' + myGenes);
+	  
+		<!-- $.fancybox.open({ -->
+		<!-- <\!-- href : 'fancyBox/demo/iframe.html', -\-> -->
+		<!-- href : 'http://itlvmbibp01.med.harvard.edu/test/cgi-bin/submit6.cgi?Grp1=' + myGrp1 + '&Genes=' + myGenes, -->
+		<!-- type : 'iframe', -->
+		<!-- padding : 5 -->
+		<!-- }); -->
+	  $.fancybox.open('http://itlvmbibp01.med.harvard.edu/test/cgi-bin/submit6.cgi?Grp1=' + myGrp1 + '&Genes=' + myGenes);
+
+	  });
+
+
+
+
+        });
+
+</script>
+</head>
+
+<body class="example">
+
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+	1. Select the populations of interest.
+	<div id="tree3"></div>
+      </div>
+      
+      <div class="col-md-4">
+	2. Input the list of genes<br>
+	  <textarea rows="10" cols="30" name="Genes" id="Genes" form="myform">
+Trpc6
+Csgalnact1
+Aldh1a1
+Gm4951
+Prkg1
+Ptplad2
+Rgs1
+Plxdc2
+Bgn
+Samd12
+Abcg3
+Arhgef12
+Iigp1
+Procr
+Klf12
+Esam
+Pdzk1ip1
+Dst
+Nckap1
+Ttc39b
+Nrxn1
+Tnip3
+4933409K07Rik
+Zbtb38
+F11r
+4933409K07Rik
+4933409K07Rik
+Gm3893
+Slc24a5
+Npr2
+Plscr4
+Crispld1
+Gucy1a3
+Lphn2
+Zfp532
+Gm3893
+Egr1
+Mecom
+Lonrf3
+Pkd2
+Ccdc112
+Lphn2
+Sult1a1
+Cdc42bpa
+Slc16a9
+Nfia
+Sema7a
+Art4
+A930039A15Rik
+Naip5
+Gata3
+Chrnb1
+Cish
+Mllt4
+Leprel2
+Rec8
+2310057J16Rik
+Cdk14
+Ptrf
+Trim47
+Fosb
+Rhof
+Gbp5
+Irf6
+Gatsl3
+Syde1
+C630004H02Rik
+Ndrg2
+Erc1
+Nlrc5
+Cttn
+Inadl
+Tead2
+Vsig2
+Ptpn21
+Ell2
+Tom1l1
+Cyp4v3
+Fry
+Snx33
+Tle6
+A630072M18Rik
+Tbc1d9
+Tle2
+Srgap3
+Vsig10
+Srgap3
+Hoxb4
+4933409K07Rik
+Tmem140
+Hoxa5
+Arhgap6
+Taf9b
+Ctsf
+Ccl19
+Vsig10
+Fam171a1
+C1rl
+1810062O18Rik
+Tinagl1
+Syde2
+Fgfr1
+Pde8a
+Ldhd
+Sfxn4
+Zfp111
+Ptpn14
+Hoxa6
+Mlph
+Col16a1
+Cdc42bpb
+Copz2
+Zfp870
+Mast4
+2310028H24Rik
+Gkap1
+St3gal1
+B230354K17Rik
+Vsig10
+Rab11fip5
+Kif1b
+Eps8l2
+Mir27a
+Dnaja4
+Obsl1
+Sorbs1
+Plekho2
+Tanc2
+Gpr31c
+Dock6
+Rundc3a
+4930402H24Rik
+Gm10866
+Dync2h1
+Nr4a1
+Fchsd1
+2410022M11Rik
+Ppp4r1l-ps
+Abhd1
+Prpf40b
+Ythdc2
+Carf
+Evi5l
+Fgfrl1
+Ttc36
+Hdhd2
+Krtcap3
+Lrrc29
+Gm10638
+Pqlc1
+</textarea>
+	<form id="myform" action="" method="post">
+	  <input type="hidden" name="Grp1" id="Grp1"></input><br>
+	</form>
+	<!-- <textarea rows="20" cols="30" name="Genes" id="Genes" form="myform"> -->
+<script>
+	  function handleFileSelect(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+
+    var files = evt.dataTransfer.files; // FileList object.
+    var reader = new FileReader();  
+    reader.onload = function(event) {            
+         document.getElementById('Genes').value = event.target.result;
+    }        
+    reader.readAsText(files[0],"UTF-8");
+  }
+
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+  }
+
+  // Setup the dnd listeners.
+  var dropZone = document.getElementById('Genes');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
+</script>
+      </div>
+      
+      <div class="col-md-4">
+	3. Let's see! <br>
+	<input id="btn" class="btn btn-primary" type="submit" value="Submit"/>
+	
+      </div>
+	
+	</div> <!-- end .row -->
+
+    <div class="row">
+      <!-- <a href="javascript: void(0);" class="badge-post-zoom zoomable"> <img id="results" src="" width="100%"></img> </a> -->
+      <!-- <a id="single" href="" target="_blank"> <img id="results" src="" width="100%"></img> </a> -->
+      <a id="hp1" class="fancybox" href="" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img id="hp2" src="" alt="" /></a>
+       <!-- <img id="results" src="" width="800"></img> -->
+      <!-- <iframe id="results" src="" width="1000" height="550"> </iframe> -->
+    </div>
+
+    <div class="row">
+    	<h3>Simple image gallery</h3>
+    	<p>
+    		<a class="fancybox" href="fancyBox/demo/1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="fancyBox/demo/1_s.jpg" alt="" /></a>
+
+    		<a class="fancybox" href="fancyBox/demo/2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="fancyBox/demo/2_s.jpg" alt="" /></a>
+
+    		<a class="fancybox" href="fancyBox/demo/3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="fancyBox/demo/3_s.jpg" alt="" /></a>
+
+    		<a class="fancybox" href="fancyBox/demo/4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="fancyBox/demo/4_s.jpg" alt="" /></a>
+    	</p>
+    	</div>
+
+    <div class="row">
+	<h3>Open manually</h3>
+	<ul>
+		<li><a id="fancybox-manual-a" href="javascript:;">Open single item</a></li>
+		<li><a id="fancybox-manual-b" href="javascript:;">Open single item, custom options</a></li>
+		<li><a id="fancybox-manual-c" href="javascript:;">Open gallery</a></li>
+	</ul>
+	</div>
+</body>
+</html>
+
+

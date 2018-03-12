@@ -1,0 +1,19 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+html {
+ background: url('WenxianBackgroundTile.png');
+ background-repeat: repeat;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: transparent;
+}
+
+.masterhead {
+    height: 100px;
+    /* background-image: url('WenxianPlotHeader.png'); */
+    background-image: url('MyGeneSetHeader.png');
+    background-repeat: no-repeat;
+}
+
